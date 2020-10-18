@@ -1,0 +1,27 @@
+<div class="content" fxLayout="row wrap" fxLayoutGap="30px" *ngIf="products">
+    <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="50%" *ngFor="let product of products">
+
+        <mat-card class="mat-elevation-z4">
+            <mat-card-header>
+                <mat-card-title>
+                    <h3 *ngIf="product">{{product.title | uppercase}}</h3>
+                </mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="{{ImageURL + product.imagePath}}" alt={{product.title}} height="300px"
+                width="100px">
+            <mat-card-content>
+                <p>{{product.description}}
+                </p>
+            </mat-card-content>
+        </mat-card>
+
+    </div>
+    <div [hidden]="products || errMsg">
+        <mat-spinner></mat-spinner>
+        <h4>Loading . . . Please Wait</h4>
+    </div>
+    <div fxFlex *ngIf="errMsg">
+        <h2>Error</h2>
+        <h4>{{errMsg}}</h4>
+    </div>
+</div>

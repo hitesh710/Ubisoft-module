@@ -1,0 +1,15 @@
+mat-toolbar {
+    justify-content: space-between;
+}
+.content {
+    padding-top: 2rem;
+    padding-left: 4rem;
+}
+.content > mat-card {
+    margin-bottom: 16px;
+}
+
+.padding-custom {
+    padding-left: 3rem;
+
+}

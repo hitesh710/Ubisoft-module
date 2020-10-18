@@ -1,0 +1,33 @@
+<div fxFlex fxFlexOffset="20px" class="form-size">
+  <h3>Register Product</h3>
+  <form novalidate [formGroup]="submitForm" #fform="ngForm" (ngSubmit)="onSubmit()">
+    <p>
+      <mat-form-field class="half-width">
+        <input matInput formControlName="title" placeholder="Title" type="text" required />
+        <mat-error *ngIf="formErrors.title">{{
+            formErrors.title
+          }}</mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="browse-file">
+        <ngx-mat-file-input formControlName="image" [accept]="accept" required>
+        </ngx-mat-file-input>
+        <mat-error *ngIf="formErrors.image">{{
+            formErrors.image
+          }}</mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="full-width">
+        <textarea matInput formControlName="description" placeholder="Description" rows="3" required></textarea>
+        <mat-error *ngIf="formErrors.description">{{
+            formErrors.description
+          }}</mat-error>
+      </mat-form-field>
+    </p>
+    <button type="submit" mat-button class="background-primary text-floral-white" [disabled]="!submitForm.valid">
+      Submit
+    </button>
+  </form>
+</div>

@@ -1,5 +1,5 @@
 # Ubisoft-module
-This Module has been developed using Angular 10 as Front-End technology and php and MySQL as backend technolgies. This project supports the following features
+This Module has been developed using Angular 10 as Front-End technology and php and MySQL as Back-End technologies. This project supports the following features
 1. Adding the products through 'Register' page
 2. Showing the added products at 'Home' page
 3. There are navigation bar to navigate to 'Register' and 'Home' page
